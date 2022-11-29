@@ -1,0 +1,8 @@
+
+
+.banner-div{
+    background: url('../../../utilities/images/bannerbackground.png') no-repeat;
+    background-position: center ;
+    background-size: cover;
+    height: 500px;
+}
