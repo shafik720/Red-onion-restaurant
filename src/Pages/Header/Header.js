@@ -33,9 +33,9 @@ const Header = () => {
                         <Link to='/'><img src={headerLogo} alt="" /></Link>
                     </div>
                     <div className="right-header ">
-                        <Link to='/cart'><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Link>
-                        <Link className='commonLink' to='/login'>Login</Link>
-                        <Link className='commonLink' to='/signup'>Sign Up</Link>
+                        <Link onClick={menuHide} to='/cart'><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Link>
+                        <Link onClick={menuHide} className='commonLink' to='/login'>Login</Link>
+                        <Link onClick={menuHide} className='commonLink' to='/signup'>Sign Up</Link>
                     </div>                    
                     <div  className="mobile-menu">
                             <span onClick={menuShow} className='bar'><FontAwesomeIcon icon={faBars}></FontAwesomeIcon></span>
