@@ -1,0 +1,12 @@
+
+.homeHeaderMenu a.active {
+    color: #F91944;
+    border-bottom: 2px solid #F91944;
+  }
+
+.homeHeaderMenu a{
+    text-decoration:  none;
+    margin: 0 30px;
+    font-weight: 600;
+    font-size: 20px;
+  }
