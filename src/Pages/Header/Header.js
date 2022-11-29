@@ -12,7 +12,7 @@ const Header = () => {
             <div className="container">
                 <div className="header-div">
                     <div className="left-header">
-                        <img src={headerLogo} alt="" />
+                        <Link to='/'><img src={headerLogo} alt="" /></Link>
                     </div>
                     <div className="right-header">
                         <Link to='/cart'><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Link>
