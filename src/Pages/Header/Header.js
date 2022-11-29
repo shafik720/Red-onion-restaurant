@@ -16,8 +16,8 @@ const Header = () => {
                     </div>
                     <div className="right-header">
                         <Link to='/cart'><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Link>
-                        <Link to='/login'>Login</Link>
-                        <Link to='/signup'>Sign Up</Link>
+                        <Link className='commonLink' to='/login'>Login</Link>
+                        <Link className='commonLink' to='/signup'>Sign Up</Link>
                     </div>
                 </div>
             </div>
