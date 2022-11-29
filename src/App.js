@@ -11,8 +11,9 @@ import Dinner from './Pages/Home/Dinner/Dinner';
 
 function App() {
   return (
-    <div>
+    <div className='main-div'>
       <Header></Header>
+      <div className="mainDiv">
       <Routes>
         <Route path='/' element={<Home></Home>}>
           <Route path='/' element={<Breakfast></Breakfast>}></Route>
@@ -22,6 +23,8 @@ function App() {
         <Route path='/about' element={<About></About>}></Route>
         <Route path='*' element={<Error></Error>}></Route>
       </Routes>
+      </div>
+      
     </div>
   );
 }

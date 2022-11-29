@@ -6,7 +6,7 @@ import HomeHeader from './HomeHeader/HomeHeader';
 
 const Home = () => {
     return (
-        <div>
+        <div className='home-div'>
             <Banner></Banner>
             <div className="home-desc-div my-5 text-center">
                 <HomeHeader></HomeHeader>

@@ -27,7 +27,7 @@ const Header = () => {
     }
     return (
         <div>
-            <div className="container header-div-parent">
+            <div className=" header-div-parent">
                 <div className="header-div">
                     <div className="left-header">
                         <Link to='/'><img src={headerLogo} alt="" /></Link>
