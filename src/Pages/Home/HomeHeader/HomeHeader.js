@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom';
 
 const HomeHeader = () => {
     return (
-        <div>
-            <Link to='/breakfast'>Breakfast</Link>
+        <div className='mb-5'>
+            <Link to='/'>Breakfast</Link>
             <Link to='/lunch'>Lunch</Link>
             <Link to='/dinner'>Dinner</Link>
         </div>
