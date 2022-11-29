@@ -1,16 +1,29 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Header.css';
 import headerLogo from '../../utilities/images/logo2.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCartShopping, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faCartShopping, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
 
 
-const Header = () => {
+const Header = () => {    
     function menuShow(){
         const rightHeader = document.querySelector('.right-header');
+        const bar = document.querySelector('.bar');
+        const barCross = document.querySelector('.bar-cross');
 
         rightHeader.classList.add('active');
+        bar.classList.add('hidden');
+        barCross.classList.remove('hidden');
+    }
+    function menuHide(){
+        const rightHeader = document.querySelector('.right-header');
+        const bar = document.querySelector('.bar');
+        const barCross = document.querySelector('.bar-cross');
+
+        rightHeader.classList.remove('active');
+        barCross.classList.add('hidden');
+        bar.classList.remove('hidden');
     }
     return (
         <div>
@@ -24,8 +37,9 @@ const Header = () => {
                         <Link className='commonLink' to='/login'>Login</Link>
                         <Link className='commonLink' to='/signup'>Sign Up</Link>
                     </div>                    
-                    <div onClick={menuShow} className="mobile-menu">
-                            <span><FontAwesomeIcon icon={faBars}></FontAwesomeIcon></span>
+                    <div  className="mobile-menu">
+                            <span onClick={menuShow} className='bar'><FontAwesomeIcon icon={faBars}></FontAwesomeIcon></span>
+                            <span onClick={menuHide} className='bar-cross hidden'><FontAwesomeIcon icon={faXmark}></FontAwesomeIcon></span>
                         </div>
                 </div>
             </div>
