@@ -2,6 +2,9 @@ import React from 'react';
 import './Header.css';
 import headerLogo from '../../utilities/images/logo2.png';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
+
 
 const Header = () => {
     return (
@@ -12,6 +15,7 @@ const Header = () => {
                         <img src={headerLogo} alt="" />
                     </div>
                     <div className="right-header">
+                        <Link to='/cart'><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Link>
                         <Link to='/login'>Login</Link>
                         <Link to='/signup'>Sign Up</Link>
                     </div>
