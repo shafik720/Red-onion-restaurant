@@ -1,7 +1,7 @@
 import React from 'react';
 import './FoodDisplayTwo.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faMinus, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 
 
 const FoodDisplayTwo = (props) => {
@@ -20,7 +20,10 @@ const FoodDisplayTwo = (props) => {
                                 <p>0</p>
                                 <p className='working-button  fw-bold fw-bolder'><FontAwesomeIcon className='working-button ' icon={faMinus}></FontAwesomeIcon></p>
                             </div>
-                            <div className="right-cart-button"></div>
+                            <div className="right-cart-button">
+                                <span><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></span>
+                                <p>Add To Cart</p>
+                            </div>
                         </div>
                     </div>
                 </div>
