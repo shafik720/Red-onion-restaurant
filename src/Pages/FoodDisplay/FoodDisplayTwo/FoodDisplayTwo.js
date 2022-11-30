@@ -11,9 +11,9 @@ const FoodDisplayTwo = (props) => {
             <div className="row">
                 <div className="col-lg-6">
                     <div className="">
-                        <h1>{foodName}</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa minima asperiores sequi odit eligendi veniam? Porro voluptatibus blanditiis facere. Quod, esse numquam. Temporibus tempore fugit modi illo ipsa eum dignissimos. Lorem ipsum, dolor sit </p>
-                        <p>$ {price}</p>
+                        <h1 className='food-name'>{foodName}</h1>
+                        <p className='food-desc'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa minima asperiores sequi odit eligendi veniam? Porro voluptatibus blanditiis facere. Quod, esse numquam. Temporibus tempore fugit modi illo ipsa eum dignissimos. Lorem ipsum, dolor sit </p>
+                        <p className='food-price'>$ {price}</p>
                         <div className="cart-button-div">
                             <div className="left-cart-button">
                                 <p className='working-button fw-bold fw-bolder'><FontAwesomeIcon className='working-button '  icon={faPlus}></FontAwesomeIcon></p>
