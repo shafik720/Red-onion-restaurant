@@ -47,5 +47,53 @@ let foodData = [
         price : 7.00,
         img : 'https://i.ibb.co/Xk4Jpty/breakfast6.png',
         catagory : 'breakfast'
-    }
+    },
+    {
+        id : 7,
+        foodName : 'Switch Farm Chito',
+        shortDesc : 'Switch Lunch',
+        price : 10.50,
+        img : 'https://i.ibb.co/FYk4LGS/lunch3.png',
+        catagory : 'lunch'
+    },
+    {
+        id : 8,
+        foodName : 'Ducks Cabin',
+        shortDesc : 'American Lunch',
+        price : 12.50,
+        img : 'https://i.ibb.co/KhSZ57F/lunch2.png',
+        catagory : 'lunch'
+    },
+    {
+        id : 9,
+        foodName : 'Pine Apple Burrito',
+        shortDesc : 'Italian Lunch',
+        price : 7.50,
+        img : 'https://i.ibb.co/XS78ZkS/lunch6.png',
+        catagory : 'lunch'
+    },
+    {
+        id : 10,
+        foodName : 'Khashir Steak',
+        shortDesc : 'Russian Lunch',
+        price : 11.50,
+        img : 'https://i.ibb.co/qdxsfcx/lunch1.png',
+        catagory : 'lunch'
+    },
+    {
+        id : 11,
+        foodName : 'Maangshey Vaat-e Bangali',
+        shortDesc : 'Bangladeshi Lunch',
+        price : 9.50,
+        img : 'https://i.ibb.co/N3JBYjP/lunch4.png',
+        catagory : 'lunch'
+    },
+    {
+        id : 12,
+        foodName : 'French Delight',
+        shortDesc : 'French Lunch',
+        price : 8.50,
+        img : 'https://i.ibb.co/w7YdbF9/lunch5.png',
+        catagory : 'lunch'
+    },
 ]
