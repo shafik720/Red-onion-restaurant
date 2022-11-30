@@ -1,7 +1,13 @@
 
 
 .food-card{
-    border: 2px solid grey;
+    border-radius: 5px;
+    padding: 20px 5px;
+    transition: all 0.3s ;
+    cursor: pointer;
+}
+.food-card:hover{
+    box-shadow: 0 10px 15px rgba(0,0,0,0.5);
 }
 .food-card img{
     width: 200px;    
