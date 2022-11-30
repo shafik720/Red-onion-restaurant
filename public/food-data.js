@@ -132,14 +132,14 @@ let foodData = [
         id : 17,
         foodName : 'Salmon Minai',
         shortDesc : 'Dutch Dinner',
-        price : 8.50,
+        price : 9.50,
         img : 'https://i.ibb.co/PCGMhN6/dinner2.png',
         catagory : 'dinner'
     },
     {
-        id : 13,
-        foodName : 'French Delight',
-        shortDesc : 'French Lunch',
+        id : 18,
+        foodName : 'Koral Kopta',
+        shortDesc : 'Indian Dinner',
         price : 8.50,
         img : 'https://i.ibb.co/Gc6H2xs/dinner3.png',
         catagory : 'dinner'
