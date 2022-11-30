@@ -14,7 +14,7 @@ const Lunch = () => {
             <div className="container ">
             <div className=' row food-showcase-section'>
                         {
-                            lunch.map(index => <Food
+                            lunch.map(index => index.catagory == 'lunch' && <Food
                                 index={index}
                                 key={index.id}
                             ></Food>)
