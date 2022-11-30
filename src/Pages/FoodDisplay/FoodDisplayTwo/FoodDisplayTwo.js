@@ -2,12 +2,17 @@ import React from 'react';
 import './FoodDisplayTwo.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faCartShopping } from '@fortawesome/free-solid-svg-icons';
-
+import HomeHeader from '../../Home/HomeHeader/HomeHeader'
 
 const FoodDisplayTwo = (props) => {
     const{foodName, shortDesc, price, catagory, img, id} = props.index ; 
     return (
         <div className='container'>
+            <div className="row">
+                <div className="col-lg-12 text-center headerInFoodDisplay">
+                <HomeHeader></HomeHeader>
+                </div>
+            </div>
             <div className="row g-5">
                 <div className="col-lg-6">
                     <div className=" left-food-section">

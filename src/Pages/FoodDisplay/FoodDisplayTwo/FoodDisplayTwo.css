@@ -1,5 +1,12 @@
 
-
+.headerInFoodDisplay{
+    margin-top: -80px;
+    margin-bottom: 50px;
+    color: #C2B8C0;
+}
+.headerInFoodDisplay a{
+    color: #C2B8C0;
+}
 .food-name{
     font-weight: 700;
     margin: 30px 0;
