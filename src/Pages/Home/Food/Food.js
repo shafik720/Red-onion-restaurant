@@ -1,10 +1,14 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import './Food.css'
 
 const Food = (props) => {
     const{foodName, shortDesc, price, catagory, img, id} = props.index ; 
+
+    let navigate = useNavigate();
     function foodCardClick(element){
-        console.log(element);
+        let url = `/food/${element}`;
+        navigate(url);
     }
     return (
         <div onClick={()=>foodCardClick(id)} className='col-lg-4 col-md-6   g-4'>
