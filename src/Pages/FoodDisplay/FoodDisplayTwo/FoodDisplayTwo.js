@@ -1,5 +1,8 @@
 import React from 'react';
 import './FoodDisplayTwo.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faPlus, faMinus } from '@fortawesome/free-solid-svg-icons';
+
 
 const FoodDisplayTwo = (props) => {
     const{foodName, shortDesc, price, catagory, img, id} = props.index ; 
@@ -10,6 +13,15 @@ const FoodDisplayTwo = (props) => {
                     <div className="">
                         <h1>{foodName}</h1>
                         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa minima asperiores sequi odit eligendi veniam? Porro voluptatibus blanditiis facere. Quod, esse numquam. Temporibus tempore fugit modi illo ipsa eum dignissimos. Lorem ipsum, dolor sit </p>
+                        <p>$ {price}</p>
+                        <div className="cart-button-div">
+                            <div className="left-cart-button">
+                                <p className='working-button fw-bold fw-bolder'><FontAwesomeIcon className='working-button '  icon={faPlus}></FontAwesomeIcon></p>
+                                <p>0</p>
+                                <p className='working-button  fw-bold fw-bolder'><FontAwesomeIcon className='working-button ' icon={faMinus}></FontAwesomeIcon></p>
+                            </div>
+                            <div className="right-cart-button"></div>
+                        </div>
                     </div>
                 </div>
             </div>
