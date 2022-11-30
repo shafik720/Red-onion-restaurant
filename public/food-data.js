@@ -96,4 +96,52 @@ let foodData = [
         img : 'https://i.ibb.co/w7YdbF9/lunch5.png',
         catagory : 'lunch'
     },
+    {
+        id : 13,
+        foodName : 'Rice With Beef Cake',
+        shortDesc : 'French Dinner',
+        price : 10.50,
+        img : 'https://i.ibb.co/R3qSLwF/dinner1.png',
+        catagory : 'dinner'
+    },
+    {
+        id : 14,
+        foodName : 'Premium Night Salad',
+        shortDesc : 'American Dinner',
+        price : 7.50,
+        img : 'https://i.ibb.co/Y8cd7cJ/dinner6.png',
+        catagory : 'dinner'
+    },
+    {
+        id : 15,
+        foodName : 'Bread Delight',
+        shortDesc : 'Australian Dinner',
+        price : 6.50,
+        img : 'https://i.ibb.co/VT7xSf9/dinner5.png',
+        catagory : 'dinner'
+    },
+    {
+        id : 16,
+        foodName : 'Baked Pasta',
+        shortDesc : 'Italian Dinner',
+        price : 7.50,
+        img : 'https://i.ibb.co/Hgwk3MD/dinner4.png',
+        catagory : 'dinner'
+    },
+    {
+        id : 17,
+        foodName : 'Salmon Minai',
+        shortDesc : 'Dutch Dinner',
+        price : 8.50,
+        img : 'https://i.ibb.co/PCGMhN6/dinner2.png',
+        catagory : 'dinner'
+    },
+    {
+        id : 13,
+        foodName : 'French Delight',
+        shortDesc : 'French Lunch',
+        price : 8.50,
+        img : 'https://i.ibb.co/Gc6H2xs/dinner3.png',
+        catagory : 'dinner'
+    }
 ]
