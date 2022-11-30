@@ -5,6 +5,8 @@
     padding: 20px 5px;
     transition: all 0.3s ;
     cursor: pointer;
+    width: 320px;
+    margin: auto;
 }
 .food-card:hover{
     box-shadow: 0 10px 15px rgba(0,0,0,0.5);
@@ -26,3 +28,11 @@
     margin: 10px 0 !important;
     color: crimson !important;
 }
+
+@media only screen and (max-width:768px){
+    .food-card{
+        padding: 20px 5px;
+        width: 100%;
+        margin: auto;
+    }
+  }
