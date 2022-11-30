@@ -18,9 +18,11 @@
 }
 .food-card p{
     margin: 10px 0;
+    color: grey;
 }
 .price{
     font-weight: 700;
     font-size: 22px;
     margin: 10px 0 !important;
+    color: crimson !important;
 }
