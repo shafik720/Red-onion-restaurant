@@ -9,6 +9,18 @@
 .food-card:hover{
     box-shadow: 0 10px 15px rgba(0,0,0,0.5);
 }
+.food-card h2{
+    font-size: 22px;
+    margin-top: 15px;
+}
 .food-card img{
     width: 200px;    
+}
+.food-card p{
+    margin: 10px 0;
+}
+.price{
+    font-weight: 700;
+    font-size: 22px;
+    margin: 10px 0 !important;
 }

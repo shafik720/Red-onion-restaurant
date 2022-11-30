@@ -9,7 +9,7 @@ const Food = (props) => {
             <img src={img} alt="" />
             <h2>{foodName} </h2>
             <p> {shortDesc} </p>
-            <p>$ {price} </p>
+            <p className='price'>$ {price} </p>
             </div>
         </div>
     );
