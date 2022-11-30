@@ -62,3 +62,20 @@
 .right-cart-button p{
     margin: 0;
 }
+
+
+
+.food-display-right{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.food-display-right img{
+    width: 80%;
+}
+
+@media only screen and (max-width:768px){
+    .left-food-section{
+        padding: 10px 15px;
+    }
+}
