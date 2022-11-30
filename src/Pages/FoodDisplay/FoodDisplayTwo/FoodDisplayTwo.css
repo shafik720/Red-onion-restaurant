@@ -85,4 +85,9 @@
     .left-food-section{
         padding: 10px 15px;
     }
+    .headerInFoodDisplay{
+        margin-top: 0px;
+        margin-bottom: 10px;
+        color: #C2B8C0;
+    }
 }
