@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import Food from '../Food/Food';
 import './Breakfast.css'
 
 const Breakfast = () => {
@@ -10,7 +11,12 @@ const Breakfast = () => {
     },[])
     return (
         <div>
-            <h2>Break Fast Section Here </h2>
+            {
+                breakfast.map(index=><Food 
+                    index = {index}
+                    key = {index.id}
+                ></Food>)
+            }
         </div>
     );
 };
