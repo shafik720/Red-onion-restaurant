@@ -46,11 +46,9 @@ const FoodDisplayTwo = (props) => {
         } else {
             document.querySelector('.next-icon-item').classList.remove('hidden');
         }
-        // if(number == food.length ){
-        //     document.querySelector('.next-icon-item').classList.add('hidden');
-        //     document.querySelector('.previous-icon-item').classList.add('hidden');
-        // }
-    }, [number])
+    }, [number]);
+
+    
     return (
         <div className='container h-100'>
             <div className="row h-100">
@@ -70,7 +68,7 @@ const FoodDisplayTwo = (props) => {
                                 <p>0</p>
                                 <p className='working-button  fw-bold fw-bolder'><FontAwesomeIcon className='working-button ' icon={faMinus}></FontAwesomeIcon></p>
                             </div>
-                            <div className="right-cart-button">
+                            <div draggable onClick={} className="right-cart-button">
                                 <span><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></span>
                                 <p>Add To Cart</p>
                             </div>
