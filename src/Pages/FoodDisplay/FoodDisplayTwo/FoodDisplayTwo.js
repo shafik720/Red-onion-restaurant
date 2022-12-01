@@ -33,11 +33,15 @@ const FoodDisplayTwo = (props) => {
     function showPrevious() {
         if(number != 1){
             setNumber(number-1);
-        }      
-        if(number == 1)  {
-
-        }
+        }  
     }
+    useEffect(()=>{
+        if(number == 1)  {
+            document.querySelector('.previous-icon-item').classList.add('hidden');
+        }else{
+            document.querySelector('.previous-icon-item').classList.remove('hidden');
+        }
+    },[number])
     return (
         <div className='container h-100'>
             <div className="row h-100">
