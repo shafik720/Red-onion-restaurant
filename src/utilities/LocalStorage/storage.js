@@ -11,8 +11,12 @@ function addToDb(id){
     localStorage.setItem('food', JSON.stringify(getStoredItems));
 }
 
-
+function getStoredItem(){
+    let getStoredItems = JSON.parse(localStorage.getItem('food') || '{}')    ;
+    return getStoredItems;
+}
 
 export {
-    addToDb
+    addToDb,
+    getStoredItem
 }
