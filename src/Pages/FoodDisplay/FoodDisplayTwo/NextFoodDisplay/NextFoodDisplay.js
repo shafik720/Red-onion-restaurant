@@ -14,8 +14,8 @@ const NextFoodDisplay = (props) => {
         <div className='col-4 next-food-card '>
             <div className="text-center h-100  ">
                 <div  onClick={()=>foodCardClick(id)} className="h-100 next-food-single-item ">
-                <img src={img} alt="" />
-                <p className="fw-bold mt-3">{foodName}</p>
+                <img draggable src={img} alt="" />
+                <p draggable className="fw-bold mt-3">{foodName}</p>
                 </div>
             </div>
         </div>

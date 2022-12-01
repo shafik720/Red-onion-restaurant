@@ -67,7 +67,7 @@ const FoodDisplayTwo = (props) => {
             <div className="row my-5">
                 <div className="col-1 ">
                     <div className="next-icon  h-100">
-                        <p onClick={showPrevious} className="m-0 fs-2 next-icon-item"><FontAwesomeIcon icon={faHandPointLeft}></FontAwesomeIcon></p>
+                        <p draggable onClick={showPrevious} className="m-0 fs-2 next-icon-item"><FontAwesomeIcon icon={faHandPointLeft}></FontAwesomeIcon></p>
                     </div>
                 </div>
                 <div className="col-10 h-100">
@@ -84,7 +84,7 @@ const FoodDisplayTwo = (props) => {
                 </div>
                 <div className="col-1 ">
                     <div className="next-icon  h-100">
-                        <p onClick={showNext} className="m-0 fs-2 next-icon-item"><FontAwesomeIcon icon={faHandPointRight}></FontAwesomeIcon></p>
+                        <p draggable onClick={showNext} className="m-0 fs-2 next-icon-item"><FontAwesomeIcon icon={faHandPointRight}></FontAwesomeIcon></p>
                     </div>
                 </div>
             </div>
