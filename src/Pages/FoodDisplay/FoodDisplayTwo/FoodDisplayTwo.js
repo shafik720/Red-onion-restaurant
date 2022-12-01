@@ -54,7 +54,7 @@ const FoodDisplayTwo = (props) => {
             
             <div className="row my-5">
                 <div className="col-1 ">
-                    <div className="test  h-100">
+                    <div className="next-icon  h-100">
                         <p className="m-0 fs-2"><FontAwesomeIcon icon={faHandPointLeft}></FontAwesomeIcon></p>
                     </div>
                 </div>
@@ -71,7 +71,7 @@ const FoodDisplayTwo = (props) => {
                     </div>
                 </div>
                 <div className="col-1 ">
-                    <div className="test  h-100">
+                    <div className="next-icon  h-100">
                         <p className="m-0 fs-2"><FontAwesomeIcon icon={faHandPointRight}></FontAwesomeIcon></p>
                     </div>
                 </div>
