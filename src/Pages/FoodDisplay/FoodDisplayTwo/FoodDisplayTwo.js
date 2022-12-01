@@ -3,9 +3,22 @@ import './FoodDisplayTwo.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faCartShopping } from '@fortawesome/free-solid-svg-icons';
 import HomeHeader from '../../Home/HomeHeader/HomeHeader'
+import useFood from '../../../utilities/hooks/useFood';
+import NextFoodDisplay from './NextFoodDisplay/NextFoodDisplay';
 
 const FoodDisplayTwo = (props) => {
     const{foodName, shortDesc, price, catagory, img, id} = props.index ; 
+
+    const[food, setFood] = useFood();
+    function idCore(){
+        let currentId = id;
+        if(id == food.length){
+            currentId = 0;
+            return currentId;
+        }
+        return currentId;
+    }
+    let x = idCore();
     return (
         <div className='container'>
             <div className="row">
@@ -36,6 +49,16 @@ const FoodDisplayTwo = (props) => {
                     <div className="food-display-right ">
                         <img src={img} alt="" />
                     </div>
+                </div>
+            </div>
+            <div className="container">
+                <div className="next-food-div">
+                    {
+                        food.map(index=> ((index.id == x+1) || (index.id == x+2)) && <NextFoodDisplay
+                            key = {index.id}
+                            index = {index}
+                        ></NextFoodDisplay>)
+                    }
                 </div>
             </div>
         </div>
