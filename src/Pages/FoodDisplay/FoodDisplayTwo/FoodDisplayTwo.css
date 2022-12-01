@@ -81,6 +81,33 @@
     width: 80%;
 }
 
+.next-icon-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.next-icon-div p{
+    color: black;
+    font-size: 50px;
+}
+
+.next-div-parent{
+    position: relative;
+    border: 2px solid green;
+}
+.setting-height{
+    position: absolute;
+    top: 50% !important;
+    left: 4%;
+    transform: translate(-50%, -50%)
+}
+.setting-height-right{
+    position: absolute;
+    top: 50% !important;
+    right: 4%;
+    transform: translate(50%, -50%)
+}
+
 @media only screen and (max-width:768px){
     .left-food-section{
         padding: 10px 15px;
