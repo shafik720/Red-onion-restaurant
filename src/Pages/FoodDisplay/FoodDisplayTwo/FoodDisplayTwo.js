@@ -26,31 +26,31 @@ const FoodDisplayTwo = (props) => {
     }, [])
 
     function showNext() {
-        if(number !=(food.length - 1)){
-            setNumber(number+1);
-        }        
+        if (number != (food.length - 1)) {
+            setNumber(number + 1);
+        }
     }
     function showPrevious() {
-        if(number != 1){
-            setNumber(number-1);
-        }  
+        if (number != 1) {
+            setNumber(number - 1);
+        }
     }
-    useEffect(()=>{
-        if(number == 1)  {
+    useEffect(() => {
+        if (number == 1) {
             document.querySelector('.previous-icon-item').classList.add('hidden');
-        }else{
+        } else {
             document.querySelector('.previous-icon-item').classList.remove('hidden');
         }
-        if(number ==(food.length - 1)){
+        if (number == (food.length - 1)) {
             document.querySelector('.next-icon-item').classList.add('hidden');
-        }else{
+        } else {
             document.querySelector('.next-icon-item').classList.remove('hidden');
         }
         // if(number == food.length ){
         //     document.querySelector('.next-icon-item').classList.add('hidden');
         //     document.querySelector('.previous-icon-item').classList.add('hidden');
         // }
-    },[number])
+    }, [number])
     return (
         <div className='container h-100'>
             <div className="row h-100">

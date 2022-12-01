@@ -127,4 +127,7 @@
     .right-cart-button p{
         font-size: 16px;
     }
+    .left-cart-button{
+        padding: 10px 2px;
+    }
 }
