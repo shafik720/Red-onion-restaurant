@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import './Food.css'
+import './Food.css';
 
 const Food = (props) => {
     const{foodName, shortDesc, price, catagory, img, id} = props.index ; 
