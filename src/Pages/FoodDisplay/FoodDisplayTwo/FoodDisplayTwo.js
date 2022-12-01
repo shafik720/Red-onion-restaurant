@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import './FoodDisplayTwo.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faMinus, faCartShopping, faHandPointLeft, faHandPointRight } from '@fortawesome/free-solid-svg-icons';
@@ -18,13 +18,18 @@ const FoodDisplayTwo = (props) => {
         }
         return currentId;
     }
-    let x = idCore();
-    
-    function showNext(){
-        console.log('clicked');
+    let [number, setNumber] = useState('');
+    // let x = idCore();
+    useEffect(() => {
+        let y = idCore();
+        setNumber(y);
+    }, [])
+
+    function showNext() {
+        setNumber(number+1);
     }
-    function showPrevious(){
-        console.log('clicked');
+    function showPrevious() {
+        setNumber(number-1);
     }
     return (
         <div className='container h-100'>
@@ -58,7 +63,7 @@ const FoodDisplayTwo = (props) => {
                     </div>
                 </div>
             </div>
-            
+
             <div className="row my-5">
                 <div className="col-1 ">
                     <div className="next-icon  h-100">
@@ -69,7 +74,7 @@ const FoodDisplayTwo = (props) => {
                     <div className="h-100">
                         <div className="row h-100">
                             {
-                                food.map(index => ((index.id == x + 1) || (index.id == x + 2) || (index.id == x + 3)) && <NextFoodDisplay
+                                food.map(index => ((index.id == number + 1) || (index.id == number + 2) || (index.id == number + 3)) && <NextFoodDisplay
                                     key={index.id}
                                     index={index}
                                 ></NextFoodDisplay>)
