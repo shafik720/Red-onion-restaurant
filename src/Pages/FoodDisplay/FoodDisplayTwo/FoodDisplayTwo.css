@@ -124,4 +124,7 @@
     .orders-1{
         order: 2;
     }
+    .right-cart-button p{
+        font-size: 16px;
+    }
 }

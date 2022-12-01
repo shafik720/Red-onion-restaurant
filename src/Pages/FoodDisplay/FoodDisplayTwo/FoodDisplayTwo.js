@@ -46,6 +46,10 @@ const FoodDisplayTwo = (props) => {
         }else{
             document.querySelector('.next-icon-item').classList.remove('hidden');
         }
+        // if(number == food.length ){
+        //     document.querySelector('.next-icon-item').classList.add('hidden');
+        //     document.querySelector('.previous-icon-item').classList.add('hidden');
+        // }
     },[number])
     return (
         <div className='container h-100'>
