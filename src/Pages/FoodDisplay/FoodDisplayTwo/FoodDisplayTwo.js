@@ -5,6 +5,7 @@ import { faPlus, faMinus, faCartShopping, faHandPointLeft, faHandPointRight, faA
 import HomeHeader from '../../Home/HomeHeader/HomeHeader'
 import useFood from '../../../utilities/hooks/useFood';
 import NextFoodDisplay from './NextFoodDisplay/NextFoodDisplay';
+import { addToDb } from '../../../utilities/LocalStorage/storage';
 
 const FoodDisplayTwo = (props) => {
     const { foodName, shortDesc, price, catagory, img, id } = props.index;
@@ -48,7 +49,9 @@ const FoodDisplayTwo = (props) => {
         }
     }, [number]);
 
-    
+    function addToCart(element){
+        addToDb(element);
+    }
     return (
         <div className='container h-100'>
             <div className="row h-100">
@@ -68,7 +71,9 @@ const FoodDisplayTwo = (props) => {
                                 <p>0</p>
                                 <p className='working-button  fw-bold fw-bolder'><FontAwesomeIcon className='working-button ' icon={faMinus}></FontAwesomeIcon></p>
                             </div>
-                            <div draggable onClick={} className="right-cart-button">
+
+    {/* ------------------------- Add to Cart Button ------------------------------  */}
+                            <div draggable onClick={()=>addToCart(id)} className="right-cart-button">
                                 <span><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></span>
                                 <p>Add To Cart</p>
                             </div>
