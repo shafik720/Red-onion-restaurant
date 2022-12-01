@@ -26,7 +26,7 @@ const FoodDisplayTwo = (props) => {
                     <HomeHeader></HomeHeader>
                 </div>
             </div>
-            <div className="row g-5 h-100">
+            <div className="row g-4 h-100">
                 <div className="col-lg-6 orders-1 h-100">
                     <div className=" left-food-section">
                         <h1 className='food-name'>{foodName}</h1>
