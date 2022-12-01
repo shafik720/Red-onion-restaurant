@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import './FoodDisplayTwo.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faMinus, faCartShopping, faHandPointLeft, faHandPointRight } from '@fortawesome/free-solid-svg-icons';
+import { faPlus, faMinus, faCartShopping, faHandPointLeft, faHandPointRight, faAngleLeft, faAngleRight } from '@fortawesome/free-solid-svg-icons';
 import HomeHeader from '../../Home/HomeHeader/HomeHeader'
 import useFood from '../../../utilities/hooks/useFood';
 import NextFoodDisplay from './NextFoodDisplay/NextFoodDisplay';
@@ -87,7 +87,7 @@ const FoodDisplayTwo = (props) => {
             <div className="row my-5">
                 <div className="col-1 ">
                     <div className="next-icon  h-100">
-                        <p draggable onClick={showPrevious} className="m-0 fs-2 previous-icon-item"><FontAwesomeIcon icon={faHandPointLeft}></FontAwesomeIcon></p>
+                        <p draggable onClick={showPrevious} className="m-0 fs-2 previous-icon-item"><FontAwesomeIcon icon={faAngleLeft}></FontAwesomeIcon></p>
                     </div>
                 </div>
                 <div className="col-10 h-100">
@@ -104,7 +104,7 @@ const FoodDisplayTwo = (props) => {
                 </div>
                 <div className="col-1 ">
                     <div className="next-icon  h-100">
-                        <p draggable onClick={showNext} className="m-0 fs-2 next-icon-item"><FontAwesomeIcon icon={faHandPointRight}></FontAwesomeIcon></p>
+                        <p draggable onClick={showNext} className="m-0 fs-2 next-icon-item"><FontAwesomeIcon icon={faAngleRight}></FontAwesomeIcon></p>
                     </div>
                 </div>
             </div>
