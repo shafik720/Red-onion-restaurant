@@ -94,17 +94,13 @@
 .next-div-parent{
     position: relative;
 }
-.setting-height{
-    position: absolute;
-    top: 50% !important;
-    left: 4%;
-    transform: translate(-50%, -50%)
-}
-.setting-height-right{
-    position: absolute;
-    top: 50% !important;
-    right: 4%;
-    transform: translate(50%, -50%)
+
+
+
+.test{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media only screen and (max-width:768px){

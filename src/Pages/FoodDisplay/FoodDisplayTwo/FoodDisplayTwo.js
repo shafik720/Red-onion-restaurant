@@ -51,31 +51,30 @@ const FoodDisplayTwo = (props) => {
                     </div>
                 </div>
             </div>
-            <div className="row next-food-div h-100 next-div-parent">
-                {/* <div className="col-lg-1 col-md-1 col-sm-1 h-100"></div>
-                <div className="setting-height">
-                    <div className="next-icon-div ">
-                        <p> <FontAwesomeIcon icon={faHandPointLeft}></FontAwesomeIcon> </p>
-                    </div>
-                </div> */}
-                <div className="col-lg-10 col-md-10 col-sm-10 h-100 ">
-                    <div className="row h-100">
-                        {
-                            food.map(index => ((index.id == x + 1) || (index.id == x + 2) || (index.id == x + 3)) && <NextFoodDisplay
-                                key={index.id}
-                                index={index}
-                            ></NextFoodDisplay>)
-                        }
+            
+            <div className="row my-5">
+                <div className="col-1 ">
+                    <div className="test  h-100">
+                        <p className="m-0 fs-2"><FontAwesomeIcon icon={faHandPointLeft}></FontAwesomeIcon></p>
                     </div>
                 </div>
-                {/* <div className="col-lg-1 col-md-1 col-sm-1 h-100">                    
-                </div>
-                <div className="setting-height-right">
-                    <div className="next-icon-div ">
-                        <p> <FontAwesomeIcon icon={faHandPointRight}></FontAwesomeIcon> </p>
+                <div className="col-10 ">
+                    <div className="">
+                        <div className="row h-100">
+                            {
+                                food.map(index => ((index.id == x + 1) || (index.id == x + 2) || (index.id == x + 3)) && <NextFoodDisplay
+                                    key={index.id}
+                                    index={index}
+                                ></NextFoodDisplay>)
+                            }
+                        </div>
                     </div>
-                </div> */}
-
+                </div>
+                <div className="col-1 ">
+                    <div className="test  h-100">
+                        <p className="m-0 fs-2"><FontAwesomeIcon icon={faHandPointRight}></FontAwesomeIcon></p>
+                    </div>
+                </div>
             </div>
         </div>
     );
