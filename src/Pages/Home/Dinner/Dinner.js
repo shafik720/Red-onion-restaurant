@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
+import useFood from '../../../utilities/hooks/useFood';
 import Food from '../Food/Food';
 import './Dinner.css';
 
 const Dinner = () => {
-    const [dinner, setDinner] = useState([]);
-    useEffect(() => {
-        fetch('https://raw.githubusercontent.com/shafik720/rest-api/main/red-onion.json')
-            .then(res => res.json())
-            .then(data => setDinner(data))
-    }, [])
+    const [dinner, setDinner] = useFood();
     return (
         <div className="my-5">
             <div className="container ">
