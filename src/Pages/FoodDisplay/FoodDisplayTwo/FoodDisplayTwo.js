@@ -26,7 +26,9 @@ const FoodDisplayTwo = (props) => {
     }, [])
 
     function showNext() {
-        setNumber(number+1);
+        if(number !=(food.length - 1)){
+            setNumber(number+1);
+        }        
     }
     function showPrevious() {
         setNumber(number-1);
