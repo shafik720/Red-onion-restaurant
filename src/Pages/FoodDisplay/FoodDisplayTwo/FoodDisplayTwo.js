@@ -58,8 +58,8 @@ const FoodDisplayTwo = (props) => {
                         <p className="m-0 fs-2"><FontAwesomeIcon icon={faHandPointLeft}></FontAwesomeIcon></p>
                     </div>
                 </div>
-                <div className="col-10 ">
-                    <div className="">
+                <div className="col-10 h-100">
+                    <div className="h-100">
                         <div className="row h-100">
                             {
                                 food.map(index => ((index.id == x + 1) || (index.id == x + 2) || (index.id == x + 3)) && <NextFoodDisplay
