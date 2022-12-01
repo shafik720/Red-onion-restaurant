@@ -6,7 +6,7 @@ const NextFoodDisplay = (props) => {
     return (
         <div className='col-4 next-food-card '>
             <div className="text-center h-100  ">
-                <div className="h-100 border next-food-single-item ">
+                <div className="h-100 next-food-single-item ">
                 <img src={img} alt="" />
                 <p className="fw-bold mt-3">{foodName}</p>
                 </div>
