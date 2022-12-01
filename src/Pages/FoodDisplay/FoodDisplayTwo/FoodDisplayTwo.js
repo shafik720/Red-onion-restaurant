@@ -31,7 +31,10 @@ const FoodDisplayTwo = (props) => {
         }        
     }
     function showPrevious() {
-        setNumber(number-1);
+        if(number != 1){
+            setNumber(number-1);
+        }      
+        
     }
     return (
         <div className='container h-100'>
