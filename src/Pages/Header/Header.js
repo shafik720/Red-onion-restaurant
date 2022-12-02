@@ -25,6 +25,8 @@ const Header = () => {
         barCross.classList.add('hidden');
         bar.classList.remove('hidden');
     }
+
+    
     return (
         <div>
             <div className=" header-div-parent">

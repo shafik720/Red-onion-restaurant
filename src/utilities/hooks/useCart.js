@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import { getStoredItem } from "../LocalStorage/storage";
+import useFood from "./useFood";
 
 function useCart() {
     const [cart, setCart] = useState([]);
@@ -7,7 +9,7 @@ function useCart() {
         let newCart = [];
         let cartValue = getStoredItem();
         for (let id in cartValue) {
-            let addedProduct = food.find(index => index.id == id);
+            let addedProduct = food?.find(index => index.id == id);
             if (addedProduct) {
                 addedProduct.quantity = cartValue[id];
                 newCart.push(addedProduct);
