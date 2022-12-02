@@ -9,6 +9,7 @@ import Breakfast from './Pages/Home/Breakfast/Breakfast';
 import Lunch from './Pages/Home/Lunch/Lunch';
 import Dinner from './Pages/Home/Dinner/Dinner';
 import FoodDisplay from './Pages/FoodDisplay/FoodDisplay';
+import Cart from './Pages/FoodDisplay/FoodDisplayTwo/Cart/Cart';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           </Route>
           <Route path='/food/:display' element={<FoodDisplay></FoodDisplay>}></Route>
           <Route path='/about' element={<About></About>}></Route>
+          <Route path='/cart' element={<Cart></Cart>} ></Route>
           <Route path='*' element={<Error></Error>}></Route>
         </Routes>
       </div>
