@@ -6,12 +6,19 @@ import auth from '../../firebase.init';
 import {useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth'
 
 const Signup = () => {
+
+    // react fire base hook 
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
+
+      // function for getting email value
+      function handleEmail(event){
+        console.log(event.target.value);
+      }
     return (
         <div className='login-div'>
             <div className="login-header">
@@ -20,7 +27,7 @@ const Signup = () => {
             <div className="login-inputs">
                 <form action="">
                     <input type="text" placeholder='Name' />
-                    <input type="email" name="" id="" placeholder='Email'/>
+                    <input onBlur={handleEmail} type="email" name="" id="" placeholder='Email'/>
                     <input type="password" name="" id="" placeholder='Password' />
                     <input type="password" name="" id="" placeholder='Confirm Password' />
                     <button type='submit'>Register</button>
