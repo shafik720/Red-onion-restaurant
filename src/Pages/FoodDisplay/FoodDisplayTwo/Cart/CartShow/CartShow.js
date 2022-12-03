@@ -4,7 +4,7 @@ import CartShowCard from './CartShowCard/CartShowCard';
 const CartShow = (props) => {
     let cart = props.cart;
     let quantity = 0;
-    cart.forEach(index=>{
+    cart.forEach(index => {
         quantity = quantity + (index.quantity);
     });
     let decreaseFood = props.decreaseFood;
@@ -12,15 +12,18 @@ const CartShow = (props) => {
     let increaseFood = props.increaseFood;
     return (
         <div>
-            <h2>Total Quantity : {quantity} </h2>
+            <div className="cart-heading">
+                <h2>Total Quantity : {quantity} </h2>
+            </div>
+
             <div className="">
                 {
-                    cart.map(index=><CartShowCard 
-                        index = {index}
-                        key = {index.id}
-                        decreaseFood = {decreaseFood}
-                        deleteItem = {deleteItem}
-                        increaseFood = {increaseFood}
+                    cart.map(index => <CartShowCard
+                        index={index}
+                        key={index.id}
+                        decreaseFood={decreaseFood}
+                        deleteItem={deleteItem}
+                        increaseFood={increaseFood}
                     ></CartShowCard>)
                 }
             </div>

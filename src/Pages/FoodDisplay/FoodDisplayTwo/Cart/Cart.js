@@ -9,26 +9,26 @@ const Cart = () => {
     const [food, setFood] = useFood();
 
     // this decrease state is setup for updating cart state when user would increase, decrease or delete cart item, so that the cart div show real time information
-    let[decrease, setDecrease] = useState([]);
+    let [decrease, setDecrease] = useState([]);
     let decreaseCount = [];
 
     // this function would trigger when user click the Decrease button in cart 
-    function decreaseFood(element){        
+    function decreaseFood(element) {
         decreaseFromDb(element);
-        decreaseCount = [...decrease,element]
+        decreaseCount = [...decrease, element]
         setDecrease(decreaseCount);
     }
     // this function would trigger when user click the Delete button in cart 
-    function deleteItem(id){
+    function deleteItem(id) {
         deleteFromDb(id);
-        decreaseCount = [...decrease,id]
+        decreaseCount = [...decrease, id]
         setDecrease(decreaseCount);
     }
     // this function would trigger when user click the decrease button in cart 
-    function increaseFood(id){        
+    function increaseFood(id) {
         increaseFromDb(id);
         console.log(id);
-        decreaseCount = [...decrease,id]
+        decreaseCount = [...decrease, id]
         setDecrease(decreaseCount);
     }
 
@@ -44,16 +44,19 @@ const Cart = () => {
         }
         setCart(newCart);
     }, [food, decrease]);
-    
+
     return (
         <div>
-            <h2>Total Items Added : {cart.length}</h2>
+            <div className="cart-heading">
+                <h2>Total Items Added : {cart.length}</h2>
+            </div>
+
             <div className="">
-                <CartShow 
-                cart={cart}
-                decreaseFood = {decreaseFood}
-                deleteItem = {deleteItem}
-                increaseFood = {increaseFood}
+                <CartShow
+                    cart={cart}
+                    decreaseFood={decreaseFood}
+                    deleteItem={deleteItem}
+                    increaseFood={increaseFood}
                 ></CartShow>
             </div>
         </div>
