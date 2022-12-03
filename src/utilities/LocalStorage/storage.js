@@ -24,6 +24,14 @@ function decreaseFromDb(id){
     }    
 }
 
+function increaseFromDb(id){
+    let getStoredItems = JSON.parse(localStorage.getItem('food') || '{}');
+    if(getStoredItems[id]){
+        getStoredItems[id] = getStoredItems[id] + 1 ;
+        localStorage.setItem('food', JSON.stringify(getStoredItems));
+    } 
+}
+
 function deleteFromDb(id){
     let getStoredItems = JSON.parse(localStorage.getItem('food') || '{}');
     if(id in getStoredItems){
