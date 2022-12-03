@@ -85,7 +85,7 @@ const Signup = () => {
                     </div>
                     <p className='text-center'></p>
                     <div className="social-signIn">
-                    <div className="google-signIn">
+                    <div draggable className="google-signIn">
                         <img src={googleLogo} alt="" />
                     </div>
                     <div className="google-signIn">

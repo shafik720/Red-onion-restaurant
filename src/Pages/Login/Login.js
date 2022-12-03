@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import signInLogo from '../../utilities/images/logo2.png';
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Spinner } from 'react-bootstrap';
 import googleLogo from '../../utilities/images/icons/google.svg';
 import githubLogo from '../../utilities/images/icons/github.svg';
@@ -14,13 +14,17 @@ const Login = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
 
-    // react fire base hook 
+    // react fire base hook for sign in with email & password 
     const [
         signInWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useSignInWithEmailAndPassword(auth);
+
+    // react fire base hook for sign in with google 
+    const [signInWithGoogle, userGoogle, errorGoogle] = useSignInWithGoogle(auth);
+
 
     // function for getting value from email input field
     const [email, setEmail] = useState('');
@@ -38,6 +42,10 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
     }
     if (user) {
+        // navigate('/');
+        navigate(from, { replace: true });
+    }
+    if (userGoogle) {
         // navigate('/');
         navigate(from, { replace: true });
     }
@@ -64,7 +72,7 @@ const Login = () => {
                     </div>
                     <p className='text-center'></p>
                     <div className="social-signIn">
-                    <div className="google-signIn">
+                    <div draggable onClick={()=>signInWithGoogle()} className="google-signIn">
                         <img src={googleLogo} alt="" />
                     </div>
                     <div className="google-signIn">
