@@ -3,7 +3,7 @@ import { Link, useLocation, useNavigate } from 'react-router-dom';
 import './Login.css';
 import signInLogo from '../../utilities/images/logo2.png';
 import auth from '../../firebase.init';
-import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Spinner } from 'react-bootstrap';
 import googleLogo from '../../utilities/images/icons/google.svg';
 import githubLogo from '../../utilities/images/icons/github.svg';
@@ -25,6 +25,12 @@ const Login = () => {
     // react fire base hook for sign in with google 
     const [signInWithGoogle, userGoogle, errorGoogle] = useSignInWithGoogle(auth);
     if (userGoogle) {
+        // navigate('/');
+        navigate(from, { replace: true });
+    }
+
+    const [signInWithGithub, userGithub, errorGithub] = useSignInWithGithub(auth);
+    if (userGithub) {
         // navigate('/');
         navigate(from, { replace: true });
     }
@@ -75,7 +81,7 @@ const Login = () => {
                     <div draggable onClick={()=>signInWithGoogle()} className="google-signIn">
                         <img src={googleLogo} alt="" />
                     </div>
-                    <div className="google-signIn">
+                    <div draggable onClick={()=>signInWithGithub()} className="google-signIn">
                         <img src={githubLogo} alt="" />
                     </div>
                     <div className="google-signIn">
