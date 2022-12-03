@@ -54,6 +54,12 @@ const Login = () => {
                     <button type='submit'>Log In</button>
                     <p className='text-center'>New User ? <Link to='/signup'><span className='blue-text'>Register Now</span></Link> </p>
                 </form>
+                <div className="external-signIn-div">
+                    <div className="orDiv">
+                        <hr />
+                        <p>Or</p>
+                    </div>
+                </div>
             </div>
         </div>
     );
