@@ -32,19 +32,51 @@
 }
 
 /* increament decreament button in cart div's card  */
+.cart-delete-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 120px;
+    border: 2px solid #ccc;
+    padding: 1px  7px;
+    border-radius: 5px;
+    text-align: center !important;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+.cart-delete-button:hover{
+    background: darkred;
+    color: white;
+}
 .cart-button{
     display: flex;
     justify-content: space-between;
     align-items: center;
     width: 120px;
-    border: 2px solid grey;
+    border: 2px solid #ccc;
     padding: 1px  7px;
     border-radius: 5px;
     margin: 10px 0;
 }
+
 .foodcard-right{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+.working-button-2{
+    padding: 3px 3px;
+    color: grey;
+    cursor: pointer;
+}
+.working-button-2:hover{    
+    color: black;
+}
+
+
+@media only screen and (max-width:560px){
+    .foodCard{
+        width: 97%;
+    }
 }

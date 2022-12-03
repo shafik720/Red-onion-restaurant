@@ -18,12 +18,14 @@ const CartShowCard = (props) => {
                 </div>
             </div>
             <div className="foodcard-right">
-                <p>Delete</p>
+                <div className="cart-delete-button">
+                    <p>Delete</p>
+                </div>
                 <div className="cart-button">
-                        <p className='working-button fw-bold fw-bolder'><FontAwesomeIcon className='working-button ' icon={faPlus}></FontAwesomeIcon></p>
-                        <p>0</p>
-                        <p className='working-button  fw-bold fw-bolder'><FontAwesomeIcon className='working-button ' icon={faMinus}></FontAwesomeIcon></p>
-                    </div>
+                    <p className='working-button-2  fw-bold fw-bolder'><FontAwesomeIcon icon={faMinus}></FontAwesomeIcon></p>
+                    <p>0</p>
+                    <p className='working-button-2 fw-bold fw-bolder'><FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></p>
+                </div>
             </div>
         </div>
     );
