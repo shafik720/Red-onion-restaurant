@@ -26,9 +26,10 @@ function decreaseFromDb(id){
 
 function increaseFromDb(id){
     let getStoredItems = JSON.parse(localStorage.getItem('food') || '{}');
-    if(getStoredItems[id]){
+    if(getStoredItems[id] !=5){
         getStoredItems[id] = getStoredItems[id] + 1 ;
         localStorage.setItem('food', JSON.stringify(getStoredItems));
+        console.log('ok');
     } 
 }
 
@@ -43,5 +44,6 @@ export {
     addToDb,
     getStoredItem,
     decreaseFromDb,
+    increaseFromDb,
     deleteFromDb
 }

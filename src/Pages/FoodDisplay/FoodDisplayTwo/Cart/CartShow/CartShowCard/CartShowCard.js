@@ -24,7 +24,7 @@ const CartShowCard = (props) => {
                 <div className="cart-button">
                     <p draggable onClick={()=>props.decreaseFood(id)} className='working-button-2  fw-bold fw-bolder'><FontAwesomeIcon icon={faMinus}></FontAwesomeIcon></p>
                     <p draggable className='quantity-class'>{quantity}</p>
-                    <p draggable className='working-button-2 fw-bold fw-bolder'><FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></p>
+                    <p draggable onClick={()=>props.increaseFood(id)} className='working-button-2 fw-bold fw-bolder'><FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></p>
                 </div>
             </div>
         </div>

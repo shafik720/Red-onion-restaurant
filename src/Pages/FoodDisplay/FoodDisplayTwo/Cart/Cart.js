@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useCart from '../../../../utilities/hooks/useCart';
 import useFood from '../../../../utilities/hooks/useFood';
-import { decreaseFromDb, deleteFromDb, getStoredItem } from '../../../../utilities/LocalStorage/storage';
+import { decreaseFromDb, deleteFromDb, getStoredItem, increaseFromDb } from '../../../../utilities/LocalStorage/storage';
 import CartShow from './CartShow/CartShow';
 
 const Cart = () => {
@@ -26,8 +26,9 @@ const Cart = () => {
     }
     // this function would trigger when user click the decrease button in cart 
     function increaseFood(id){        
-        
-        decreaseCount = [...decrease,element]
+        increaseFromDb(id);
+        console.log(id);
+        decreaseCount = [...decrease,id]
         setDecrease(decreaseCount);
     }
 
@@ -52,6 +53,7 @@ const Cart = () => {
                 cart={cart}
                 decreaseFood = {decreaseFood}
                 deleteItem = {deleteItem}
+                increaseFood = {increaseFood}
                 ></CartShow>
             </div>
         </div>

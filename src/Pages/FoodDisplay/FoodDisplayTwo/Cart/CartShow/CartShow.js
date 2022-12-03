@@ -9,6 +9,7 @@ const CartShow = (props) => {
     });
     let decreaseFood = props.decreaseFood;
     let deleteItem = props.deleteItem;
+    let increaseFood = props.increaseFood;
     return (
         <div>
             <h2>Total Quantity : {quantity} </h2>
@@ -19,6 +20,7 @@ const CartShow = (props) => {
                         key = {index.id}
                         decreaseFood = {decreaseFood}
                         deleteItem = {deleteItem}
+                        increaseFood = {increaseFood}
                     ></CartShowCard>)
                 }
             </div>
