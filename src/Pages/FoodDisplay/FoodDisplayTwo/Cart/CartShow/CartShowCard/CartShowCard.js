@@ -13,7 +13,7 @@ const CartShowCard = (props) => {
                 </div>
                 <div className="foodcard-left-right">
                     <p>Food Name : <span className='black-text'>{foodName}</span>  </p>
-                    <p>Quantity : <span className='blue-text'>{quantity}</span>  </p>
+                    <p>Quantity : <span className='blue-text quantity-class'>{quantity}</span>  </p>
                     <p>Price Per Unit : <span className='blue-text'> $ {price}</span> </p>
                 </div>
             </div>
@@ -23,7 +23,7 @@ const CartShowCard = (props) => {
                 </div>
                 <div className="cart-button">
                     <p className='working-button-2  fw-bold fw-bolder'><FontAwesomeIcon icon={faMinus}></FontAwesomeIcon></p>
-                    <p>0</p>
+                    <p className='quantity-class'>{quantity}</p>
                     <p className='working-button-2 fw-bold fw-bolder'><FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></p>
                 </div>
             </div>
