@@ -22,6 +22,10 @@ function decreaseFromDb(id){
         getStoredItems[id] = getStoredItems[id] - 1;
         localStorage.setItem('food', JSON.stringify(getStoredItems));
     }    
+    if(getStoredItems[id] <= 0){
+        delete getStoredItems[id];
+        localStorage.setItem('food', JSON.stringify(getStoredItems));
+    }
 }
 
 function increaseFromDb(id){
@@ -29,7 +33,6 @@ function increaseFromDb(id){
     if(getStoredItems[id] !=5){
         getStoredItems[id] = getStoredItems[id] + 1 ;
         localStorage.setItem('food', JSON.stringify(getStoredItems));
-        console.log('ok');
     } 
 }
 
