@@ -29,6 +29,7 @@ const Login = () => {
         navigate(from, { replace: true });
     }
 
+    // react fire base hook for sign in with github 
     const [signInWithGithub, userGithub, errorGithub] = useSignInWithGithub(auth);
     if (userGithub) {
         // navigate('/');

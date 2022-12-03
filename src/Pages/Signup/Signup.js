@@ -1,15 +1,18 @@
 import React, { useState } from 'react';
 import './Signup.css';
 import signInLogo from '../../utilities/images/logo2.png';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth'
+import { useCreateUserWithEmailAndPassword, useSignInWithGithub, useSignInWithGoogle } from 'react-firebase-hooks/auth'
 import { Spinner } from 'react-bootstrap';
 import googleLogo from '../../utilities/images/icons/google.svg';
 import githubLogo from '../../utilities/images/icons/github.svg';
 import twitterLogo from '../../utilities/images/icons/twitter.svg';
 
 const Signup = () => {
+
+    let location = useLocation();
+    let from = location.state?.from?.pathname || "/";
 
     // react fire base hook for sign in using email & password
     const [
@@ -21,6 +24,9 @@ const Signup = () => {
 
     // react fire base hook for sign in with google 
     const [signInWithGoogle, userGoogle, errorGoogle] = useSignInWithGoogle(auth);
+
+    // react fire base hook for sign in with github 
+    const [signInWithGithub, userGithub, errorGithub] = useSignInWithGithub(auth);    
     
 
     // function for getting value from email input field
@@ -57,13 +63,15 @@ const Signup = () => {
         setCustomError('');
     }
     if(user){
-        navigate('/');
+        // navigate('/');
+        navigate(from, { replace: true });
     }
     if (userGoogle) {
         navigate('/');
     }
-    if(error){
-        
+    if (userGithub) {
+        // navigate('/');
+        navigate(from, { replace: true });
     }
 
     return (
@@ -95,7 +103,7 @@ const Signup = () => {
                     <div draggable onClick={()=>signInWithGoogle()} className="google-signIn">
                         <img src={googleLogo} alt="" />
                     </div>
-                    <div className="google-signIn">
+                    <div  draggable onClick={()=>signInWithGithub()} className="google-signIn">
                         <img src={githubLogo} alt="" />
                     </div>
                     <div className="google-signIn">
