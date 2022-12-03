@@ -14,10 +14,8 @@ const Login = () => {
             </div>
             <div className="login-inputs">
                 <form action="">
-                    <input type="text" placeholder='Name' />
                     <input type="email" name="" id="" placeholder='Email'/>
                     <input type="password" name="" id="" placeholder='Password' />
-                    <input type="password" name="" id="" placeholder='Confirm Password' />
                     <button type='submit'>Log In</button>
                     <p className='text-center'>New User ? <Link to='/signup'><span className='blue-text'>Register Now</span></Link> </p>
                 </form>

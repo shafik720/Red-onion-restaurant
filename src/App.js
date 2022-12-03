@@ -12,6 +12,7 @@ import FoodDisplay from './Pages/FoodDisplay/FoodDisplay';
 import Cart from './Pages/FoodDisplay/FoodDisplayTwo/Cart/Cart';
 import Login from './Pages/Login/Login';
 import RequireAuth from './Pages/RequireAuth/RequireAuth';
+import Signup from './Pages/Signup/Signup';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path='/about' element={<About></About>}></Route>
           <Route path='/cart' element={<RequireAuth><Cart></Cart></RequireAuth>} ></Route>
           <Route path='/login' element={<Login></Login>}></Route>
+          <Route path='/signup' element={<Signup></Signup>}></Route>
           <Route path='*' element={<Error></Error>}></Route>
         </Routes>
       </div>
