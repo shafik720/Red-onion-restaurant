@@ -6,7 +6,10 @@ const CartShow = (props) => {
     let quantity = 0;
     cart.forEach(index=>{
         quantity = quantity + (index.quantity);
-    })
+    });
+    function increaseFood(element){
+        console.log(element);
+    }
     return (
         <div>
             <h2>Total Quantity : {quantity} </h2>
@@ -15,6 +18,7 @@ const CartShow = (props) => {
                     cart.map(index=><CartShowCard 
                         index = {index}
                         key = {index.id}
+                        increaseFood = {increaseFood}
                     ></CartShowCard>)
                 }
             </div>
