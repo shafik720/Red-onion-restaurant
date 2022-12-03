@@ -10,9 +10,9 @@ const CartShowCard = (props) => {
                     <img src={img} alt="" />
                 </div>
                 <div className="foodcard-left-right">
-                        <p>Food Name : {foodName} </p>
-                        <p>Quantity : {quantity} </p>
-                        <p>Price Per Unit : $ {price} </p>
+                        <p>Food Name : <span className='black-text'>{foodName}</span>  </p>
+                        <p>Quantity : <span className='blue-text'>{quantity}</span>  </p>
+                        <p>Price Per Unit : <span className='blue-text'> $ {price}</span> </p>
                     </div>
             </div>
             <div className="foodcard-right">

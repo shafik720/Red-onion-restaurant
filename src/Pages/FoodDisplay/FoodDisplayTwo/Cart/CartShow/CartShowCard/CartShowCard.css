@@ -21,3 +21,11 @@
 .foodCard p{
     margin: 0;
 }
+
+.black-text{
+    font-weight: 600;
+}
+.blue-text{
+    font-weight: 600;
+    color: #007ACC;
+}
