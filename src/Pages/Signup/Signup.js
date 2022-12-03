@@ -40,6 +40,9 @@ const Signup = () => {
         if (password.length < 6) {
             setCustomError('Password must be more than 6 Character');
             return;
+        }else if(password !== rePassword){
+            setCustomError("Password Didn't match with Re-password");
+            return;
         }
         setCustomError('');
     }
@@ -54,7 +57,7 @@ const Signup = () => {
                     <input type="text" placeholder='Name' />
                     <input onBlur={handleEmail} type="email" name="" id="" placeholder='Email' />
                     <input onBlur={handlePassword} type="password" name="" id="" placeholder='Password' />
-                    <input type="password" name="" id="" placeholder='Confirm Password' />
+                    <input onBlur={handleRePassword} type="password" name="" id="" placeholder='Confirm Password' />
                     <div className="error-display">
                         <p>{customError ? customError : ''}</p>
                     </div>
