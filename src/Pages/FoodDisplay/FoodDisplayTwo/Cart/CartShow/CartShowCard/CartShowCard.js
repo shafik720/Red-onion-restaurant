@@ -22,9 +22,9 @@ const CartShowCard = (props) => {
                     <p>Delete</p>
                 </div>
                 <div className="cart-button">
-                    <p className='working-button-2  fw-bold fw-bolder'><FontAwesomeIcon icon={faMinus}></FontAwesomeIcon></p>
+                    <p onClick={()=>props.decreaseFood(id)} className='working-button-2  fw-bold fw-bolder'><FontAwesomeIcon icon={faMinus}></FontAwesomeIcon></p>
                     <p className='quantity-class'>{quantity}</p>
-                    <p onClick={()=>props.increaseFood(id)} className='working-button-2 fw-bold fw-bolder'><FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></p>
+                    <p className='working-button-2 fw-bold fw-bolder'><FontAwesomeIcon icon={faPlus}></FontAwesomeIcon></p>
                 </div>
             </div>
         </div>

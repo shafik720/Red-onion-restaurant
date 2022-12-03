@@ -7,9 +7,7 @@ const CartShow = (props) => {
     cart.forEach(index=>{
         quantity = quantity + (index.quantity);
     });
-    function increaseFood(element){
-        console.log(element);
-    }
+    let decreaseFood = props.decreaseFood;
     return (
         <div>
             <h2>Total Quantity : {quantity} </h2>
@@ -18,7 +16,7 @@ const CartShow = (props) => {
                     cart.map(index=><CartShowCard 
                         index = {index}
                         key = {index.id}
-                        increaseFood = {increaseFood}
+                        decreaseFood = {decreaseFood}
                     ></CartShowCard>)
                 }
             </div>
