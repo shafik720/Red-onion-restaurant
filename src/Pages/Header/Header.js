@@ -4,6 +4,8 @@ import headerLogo from '../../utilities/images/logo2.png';
 import { Link } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCartShopping, faBars, faXmark } from '@fortawesome/free-solid-svg-icons';
+import auth from '../../firebase.init';
+import { useAuthState } from 'react-firebase-hooks/auth';
 
 
 const Header = () => {    
@@ -26,7 +28,9 @@ const Header = () => {
         bar.classList.remove('hidden');
     }
 
-    
+    // calling authstate to check if user is logged in or not
+    const [user] = useAuthState(auth);
+
     return (
         <div>
             <div className=" header-div-parent">
@@ -35,8 +39,8 @@ const Header = () => {
                         <Link to='/'><img src={headerLogo} alt="" /></Link>
                     </div>
                     <div className="right-header ">
-                        <Link onClick={menuHide} to='/cart'><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Link>
-                        <Link onClick={menuHide} className='commonLink' to='/login'>Login</Link>
+                        <Link onClick={menuHide} to='/cart'><FontAwesomeIcon icon={faCartShopping}></FontAwesomeIcon></Link>                        
+                        {user ? <a href="#">Log Out</a> : <Link onClick={menuHide} className='commonLink' to='/login'>Login</Link>}
                         <Link onClick={menuHide} className='commonLink' to='/signup'>Sign Up</Link>
                     </div>                    
                     <div  className="mobile-menu">
