@@ -5,6 +5,7 @@ import signInLogo from '../../utilities/images/logo2.png';
 import auth from '../../firebase.init';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Spinner } from 'react-bootstrap';
+import googleLogo from '../../utilities/images/icons/google.svg';
 
 const Login = () => {
     let navigate = useNavigate();
@@ -58,6 +59,18 @@ const Login = () => {
                     <div className="orDiv">
                         <hr />
                         <p>Or</p>
+                    </div>
+                    <p className='text-center'>Sign in using</p>
+                    <div className="social-signIn">
+                    <div className="google-signIn">
+                        <img src={googleLogo} alt="" />
+                    </div>
+                    <div className="google-signIn">
+                        <img src={googleLogo} alt="" />
+                    </div>
+                    <div className="google-signIn">
+                        <img src={googleLogo} alt="" />
+                    </div>
                     </div>
                 </div>
             </div>

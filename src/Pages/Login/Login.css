@@ -49,6 +49,21 @@
     background: white;
     font-size: 18px;
 }
+.external-signIn-div img{
+    width: 30px;
+}
+
+.social-signIn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 15px;
+}
+.social-signIn div{
+    border: 2px solid #ccc;
+    padding: 10px;
+    cursor: pointer;
+}
 
 @media only screen and (max-width:520px){
     .login-inputs{
