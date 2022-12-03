@@ -32,13 +32,19 @@ const Signup = () => {
       function handleRePassword(event){
         setRePassword(event.target.value);
       }
+
+      // function for submitt button and sign up method
+      function handleSubmit(e){
+        e.preventDefault();
+      }
+
     return (
         <div className='login-div'>
             <div className="login-header">
                 <img src={signInLogo} alt="" />
             </div>
             <div className="login-inputs">
-                <form action="">
+                <form action="" onSubmit={handleSubmit}>
                     <input type="text" placeholder='Name' />
                     <input onBlur={handleEmail} type="email" name="" id="" placeholder='Email'/>
                     <input onBlur={handlePassword} type="password" name="" id="" placeholder='Password' />
