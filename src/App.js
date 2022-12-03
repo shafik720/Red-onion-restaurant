@@ -10,6 +10,7 @@ import Lunch from './Pages/Home/Lunch/Lunch';
 import Dinner from './Pages/Home/Dinner/Dinner';
 import FoodDisplay from './Pages/FoodDisplay/FoodDisplay';
 import Cart from './Pages/FoodDisplay/FoodDisplayTwo/Cart/Cart';
+import Login from './Pages/Login/Login';
 
 function App() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path='/food/:display' element={<FoodDisplay></FoodDisplay>}></Route>
           <Route path='/about' element={<About></About>}></Route>
           <Route path='/cart' element={<Cart></Cart>} ></Route>
+          <Route path='/login' element={<Login></Login>}></Route>
           <Route path='*' element={<Error></Error>}></Route>
         </Routes>
       </div>
