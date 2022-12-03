@@ -2,8 +2,16 @@ import React from 'react';
 import './Signup.css';
 import signInLogo from '../../utilities/images/logo2.png';
 import { Link } from 'react-router-dom';
+import auth from '../../firebase.init';
+import {useCreateUserWithEmailAndPassword} from 'react-firebase-hooks/auth'
 
 const Signup = () => {
+    const [
+        createUserWithEmailAndPassword,
+        user,
+        loading,
+        error,
+      ] = useCreateUserWithEmailAndPassword(auth);
     return (
         <div className='login-div'>
             <div className="login-header">
