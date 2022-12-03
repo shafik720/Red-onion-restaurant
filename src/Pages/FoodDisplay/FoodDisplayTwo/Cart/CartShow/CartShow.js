@@ -4,8 +4,10 @@ import CartShowCard from './CartShowCard/CartShowCard';
 const CartShow = (props) => {
     let cart = props.cart;
     let quantity = 0;
+    let price = 0;
     cart.forEach(index => {
         quantity = quantity + (index.quantity);
+        price = price + (index.quantity * index.price);
     });
     let decreaseFood = props.decreaseFood;
     let deleteItem = props.deleteItem;
@@ -14,6 +16,7 @@ const CartShow = (props) => {
         <div>
             <div className="cart-heading">
                 <h2>Total Quantity : {quantity} </h2>
+                <h2>Total Price : $ {price} </h2>
             </div>
 
             <div className="">
