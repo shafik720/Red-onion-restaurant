@@ -10,6 +10,9 @@
 .login-header img{
     width:200px;
 }
+.login-inputs{
+    width: 500px;
+}
 .login-inputs form{
     display: flex;
     flex-direction: column;
@@ -22,7 +25,21 @@
     outline: none;
     border-radius: 5px;
     border: none;
-    background: #ccc;
+    background: #F5F5F5;
     padding: 10px 20px;
-    
+
+}
+.login-inputs form button{
+    outline: none;
+    border: none;
+    height: 50px;
+    background: crimson;
+    color: white;
+    border-radius: 5px;
+}
+
+@media only screen and (max-width:520px){
+    .login-inputs{
+        width:90%;
+    }
 }
