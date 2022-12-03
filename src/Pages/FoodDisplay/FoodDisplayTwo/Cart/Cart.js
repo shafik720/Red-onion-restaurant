@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import useCart from '../../../../utilities/hooks/useCart';
 import useFood from '../../../../utilities/hooks/useFood';
 import { getStoredItem } from '../../../../utilities/LocalStorage/storage';
+import CartShow from './CartShow/CartShow';
 
 const Cart = () => {
     const [cart, setCart] = useState([]);
@@ -21,6 +22,9 @@ const Cart = () => {
     return (
         <div>
             <h2>Total Food Added : {cart.length}</h2>
+            <div className="">
+                <CartShow cart={cart}></CartShow>
+            </div>
         </div>
     );
 };
