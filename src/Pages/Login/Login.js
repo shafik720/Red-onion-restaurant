@@ -8,7 +8,7 @@ const Login = () => {
     let location = useLocation();
     let from = location.state?.from?.pathname || "/";
     return (
-        <div>
+        <div className='login-div'>
             <div className="login-header">
                 <img src={signInLogo} alt="" />
             </div>
