@@ -21,7 +21,7 @@ const Cart = () => {
     }, [food]);
     return (
         <div>
-            <h2>Total Food Added : {cart.length}</h2>
+            <h2>Total Items Added : {cart.length}</h2>
             <div className="">
                 <CartShow cart={cart}></CartShow>
             </div>

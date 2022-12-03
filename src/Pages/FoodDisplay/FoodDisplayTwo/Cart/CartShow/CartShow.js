@@ -9,7 +9,7 @@ const CartShow = (props) => {
     })
     return (
         <div>
-            <h2>Total Food Added: {quantity} </h2>
+            <h2>Total Quantity : {quantity} </h2>
             <div className="">
                 {
                     cart.map(index=><CartShowCard 
