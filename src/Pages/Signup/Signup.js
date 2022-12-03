@@ -4,6 +4,7 @@ import signInLogo from '../../utilities/images/logo2.png';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { Spinner } from 'react-bootstrap';
 
 const Signup = () => {
 
@@ -52,7 +53,7 @@ const Signup = () => {
         navigate('/');
     }
     if(error){
-
+        
     }
 
     return (
@@ -69,6 +70,7 @@ const Signup = () => {
                     <div className="error-display">
                         <p>{customError ? customError : ''}</p>
                         <p>{error ? error.message : '' }</p>
+                        <p>{loading && <Spinner animation="border" variant="primary" />}</p>
                     </div>
                     <button type='submit'>Register</button>
                     <p className='text-center'>Already Have an Account ? <Link to='/login'><span className='blue-text'>Log in Here</span></Link> </p>
