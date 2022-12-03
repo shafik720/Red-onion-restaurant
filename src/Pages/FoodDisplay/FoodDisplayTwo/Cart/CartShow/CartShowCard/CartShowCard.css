@@ -16,5 +16,8 @@
 
 .foodcard-left{
     display: flex;
-
+    column-gap: 10px;
+}
+.foodCard p{
+    margin: 0;
 }
