@@ -10,14 +10,15 @@ const Cart = () => {
 
     let[decrease, setDecrease] = useState([]);
     let decreaseCount = [];
-    function decreaseFood(element){
+    function decreaseFood(element){        
+        decreaseFromDb(element);
         decreaseCount = [...decrease,element]
         setDecrease(decreaseCount);
-        decreaseFromDb(element);
     }
     function deleteItem(id){
         deleteFromDb(id);
-        setDecrease(id);
+        decreaseCount = [...decrease,id]
+        setDecrease(decreaseCount);
     }
     useEffect(() => {
         let newCart = [];
