@@ -20,10 +20,17 @@ function decreaseFromDb(id){
     let getStoredItems = JSON.parse(localStorage.getItem('food') || '{}');
     if(getStoredItems[id] != 0){
         getStoredItems[id] = getStoredItems[id] - 1;
-    }
-    localStorage.setItem('food', JSON.stringify(getStoredItems));
+        localStorage.setItem('food', JSON.stringify(getStoredItems));
+    }    
 }
 
+function deleteFromDb(id){
+    let getStoredItems = JSON.parse(localStorage.getItem('food') || '{}');
+    if(id in getStoredItems){
+        delete getStoredItems[id];
+        localStorage.setItem('food', JSON.stringify(getStoredItems));
+    }
+}
 export {
     addToDb,
     getStoredItem,
