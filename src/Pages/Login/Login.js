@@ -57,7 +57,7 @@ const Login = () => {
                     <button type='submit'>Log In</button>
                     <p className='text-center'>New User ? <Link to='/signup'><span className='blue-text'>Register Now</span></Link> </p>
                 </form>
-                <div className="external-signIn-div">
+                <div className="external-signIn-div mb-4">
                     <div className="orDiv">
                         <hr />
                         <p>Or Sign in using</p>

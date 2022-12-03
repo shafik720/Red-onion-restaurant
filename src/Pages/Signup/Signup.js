@@ -5,6 +5,9 @@ import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
 import { Spinner } from 'react-bootstrap';
+import googleLogo from '../../utilities/images/icons/google.svg';
+import githubLogo from '../../utilities/images/icons/github.svg';
+import twitterLogo from '../../utilities/images/icons/twitter.svg';
 
 const Signup = () => {
 
@@ -75,6 +78,24 @@ const Signup = () => {
                     <button type='submit'>Register</button>
                     <p className='text-center'>Already Have an Account ? <Link to='/login'><span className='blue-text'>Log in Here</span></Link> </p>
                 </form>
+                <div className="external-signIn-div mb-5">
+                    <div className="orDiv">
+                        <hr />
+                        <p>Or Sign in using</p>
+                    </div>
+                    <p className='text-center'></p>
+                    <div className="social-signIn">
+                    <div className="google-signIn">
+                        <img src={googleLogo} alt="" />
+                    </div>
+                    <div className="google-signIn">
+                        <img src={githubLogo} alt="" />
+                    </div>
+                    <div className="google-signIn">
+                        <img src={twitterLogo} alt="" />
+                    </div>
+                    </div>
+                </div>
             </div>
         </div>
     );
