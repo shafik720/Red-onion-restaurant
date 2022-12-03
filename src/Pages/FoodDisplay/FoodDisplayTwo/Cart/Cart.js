@@ -13,7 +13,9 @@ const Cart = () => {
         setDecrease(element);
         decreaseFromDb(element);
     }
-    
+    function deleteItem(id){
+        console.log(id);
+    }
     useEffect(() => {
         let newCart = [];
         let cartValue = getStoredItem();
@@ -34,6 +36,7 @@ const Cart = () => {
                 <CartShow 
                 cart={cart}
                 decreaseFood = {decreaseFood}
+                deleteItem = {deleteItem}
                 ></CartShow>
             </div>
         </div>
