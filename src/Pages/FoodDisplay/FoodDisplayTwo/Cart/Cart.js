@@ -8,18 +8,29 @@ const Cart = () => {
     const [cart, setCart] = useState([]);
     const [food, setFood] = useFood();
 
+    // this decrease state is setup for updating cart state when user would increase, decrease or delete cart item, so that the cart div show real time information
     let[decrease, setDecrease] = useState([]);
     let decreaseCount = [];
+
+    // this function would trigger when user click the Decrease button in cart 
     function decreaseFood(element){        
         decreaseFromDb(element);
         decreaseCount = [...decrease,element]
         setDecrease(decreaseCount);
     }
+    // this function would trigger when user click the Delete button in cart 
     function deleteItem(id){
         deleteFromDb(id);
         decreaseCount = [...decrease,id]
         setDecrease(decreaseCount);
     }
+    // this function would trigger when user click the decrease button in cart 
+    function increaseFood(id){        
+        
+        decreaseCount = [...decrease,element]
+        setDecrease(decreaseCount);
+    }
+
     useEffect(() => {
         let newCart = [];
         let cartValue = getStoredItem();
