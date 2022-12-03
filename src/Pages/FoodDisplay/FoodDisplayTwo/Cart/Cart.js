@@ -7,6 +7,13 @@ import CartShow from './CartShow/CartShow';
 const Cart = () => {
     const [cart, setCart] = useState([]);
     const [food, setFood] = useFood();
+
+    let[decrease, setDecrease] = useState([]);
+    function decreaseFood(element){
+        setDecrease(element);
+        decreaseFromDb(element);
+    }
+    
     useEffect(() => {
         let newCart = [];
         let cartValue = getStoredItem();
@@ -18,12 +25,8 @@ const Cart = () => {
             }
         }
         setCart(newCart);
-    }, [food]);
-    let[decrease, setDecrease] = useState([]);
-    function decreaseFood(element){
-        console.log(element);
-        decreaseFromDb(element);
-    }
+    }, [food, decrease]);
+    
     return (
         <div>
             <h2>Total Items Added : {cart.length}</h2>

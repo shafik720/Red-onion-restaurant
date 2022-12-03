@@ -18,7 +18,7 @@ function getStoredItem(){
 
 function decreaseFromDb(id){
     let getStoredItems = JSON.parse(localStorage.getItem('food') || '{}');
-    if(getStoredItems[id]){
+    if(getStoredItems[id] != 0){
         getStoredItems[id] = getStoredItems[id] - 1;
     }
     localStorage.setItem('food', JSON.stringify(getStoredItems));
