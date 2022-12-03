@@ -1,4 +1,5 @@
 import React from 'react';
+import CartShowCard from './CartShowCard/CartShowCard';
 
 const CartShow = (props) => {
     let cart = props.cart;
@@ -9,6 +10,14 @@ const CartShow = (props) => {
     return (
         <div>
             <h2>Total Food Added: {quantity} </h2>
+            <div className="">
+                {
+                    cart.map(index=><CartShowCard 
+                        index = {index}
+                        key = {index.id}
+                    ></CartShowCard>)
+                }
+            </div>
         </div>
     );
 };
