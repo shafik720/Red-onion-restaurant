@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './Signup.css';
 import signInLogo from '../../utilities/images/logo2.png';
 import { Link } from 'react-router-dom';
@@ -15,9 +15,22 @@ const Signup = () => {
         error,
       ] = useCreateUserWithEmailAndPassword(auth);
 
-      // function for getting email value
-      function handleEmail(event){
-        console.log(event.target.value);
+      // function for getting value from email input field
+      const[email, setEmail] = useState('');
+      function handleEmail(event){        
+        setEmail(event.target.value);
+      }
+
+      // function for getting value from password input field
+      const[password, setPassword] = useState('');
+      function handlePassword(event){
+        setPassword(event.target.value);
+      }
+
+      // function for getting value from re-password input field
+      const[rePassword, setRePassword] = useState('');
+      function handleRePassword(event){
+        setRePassword(event.target.value);
       }
     return (
         <div className='login-div'>
@@ -28,7 +41,7 @@ const Signup = () => {
                 <form action="">
                     <input type="text" placeholder='Name' />
                     <input onBlur={handleEmail} type="email" name="" id="" placeholder='Email'/>
-                    <input type="password" name="" id="" placeholder='Password' />
+                    <input onBlur={handlePassword} type="password" name="" id="" placeholder='Password' />
                     <input type="password" name="" id="" placeholder='Confirm Password' />
                     <button type='submit'>Register</button>
                     <p className='text-center'>Already Have an Account ? <Link to='/login'><span className='blue-text'>Log in Here</span></Link> </p>
