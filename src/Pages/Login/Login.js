@@ -35,7 +35,8 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
     }
     if (user) {
-        navigate('/');
+        // navigate('/');
+        navigate(from, { replace: true });
     }
     return (
         <div className='login-div'>
