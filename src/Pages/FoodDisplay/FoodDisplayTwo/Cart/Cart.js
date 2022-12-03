@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import useCart from '../../../../utilities/hooks/useCart';
 import useFood from '../../../../utilities/hooks/useFood';
-import { decreaseFromDb, getStoredItem } from '../../../../utilities/LocalStorage/storage';
+import { decreaseFromDb, deleteFromDb, getStoredItem } from '../../../../utilities/LocalStorage/storage';
 import CartShow from './CartShow/CartShow';
 
 const Cart = () => {
@@ -9,12 +9,15 @@ const Cart = () => {
     const [food, setFood] = useFood();
 
     let[decrease, setDecrease] = useState([]);
+    let decreaseCount = [];
     function decreaseFood(element){
-        setDecrease(element);
+        decreaseCount = [...decrease,element]
+        setDecrease(decreaseCount);
         decreaseFromDb(element);
     }
     function deleteItem(id){
-        console.log(id);
+        deleteFromDb(id);
+        setDecrease(id);
     }
     useEffect(() => {
         let newCart = [];

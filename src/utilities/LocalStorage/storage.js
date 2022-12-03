@@ -34,5 +34,6 @@ function deleteFromDb(id){
 export {
     addToDb,
     getStoredItem,
-    decreaseFromDb
+    decreaseFromDb,
+    deleteFromDb
 }
