@@ -16,7 +16,16 @@ function getStoredItem(){
     return getStoredItems;
 }
 
+function decreaseFromDb(id){
+    let getStoredItems = JSON.parse(localStorage.getItem('food') || '{}');
+    if(getStoredItem[id]){
+        getStoredItem[id] = getStoredItem[id] - 1;
+    }
+    localStorage.setItem('food', JSON.stringify(getStoredItems));
+}
+
 export {
     addToDb,
-    getStoredItem
+    getStoredItem,
+    decreaseFromDb
 }
