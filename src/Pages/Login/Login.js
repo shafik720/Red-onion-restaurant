@@ -4,6 +4,7 @@ import './Login.css';
 import signInLogo from '../../utilities/images/logo2.png';
 import auth from '../../firebase.init';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { Spinner } from 'react-bootstrap';
 
 const Login = () => {
     let navigate = useNavigate();
@@ -16,7 +17,7 @@ const Login = () => {
         user,
         loading,
         error,
-      ] = useSignInWithEmailAndPassword(auth);
+    ] = useSignInWithEmailAndPassword(auth);
 
     // function for getting value from email input field
     const [email, setEmail] = useState('');
@@ -30,9 +31,10 @@ const Login = () => {
         setPassword(event.target.value);
     }
     function handleSubmit(e) {
-        e.preventDefault();              
+        e.preventDefault();
+        signInWithEmailAndPassword(email, password)
     }
-    if(user){
+    if (user) {
         navigate('/');
     }
     return (
@@ -42,8 +44,12 @@ const Login = () => {
             </div>
             <div className="login-inputs">
                 <form action="" onSubmit={handleSubmit}>
-                    <input onBlur={handleEmail} type="email" name="" id="" placeholder='Email'/>
+                    <input onBlur={handleEmail} type="email" name="" id="" placeholder='Email' />
                     <input onBlur={handlePassword} type="password" name="" id="" placeholder='Password' />
+                    <div className="error-display">
+                        <p>{error ? error.message : ''}</p>
+                        <p>{loading && <Spinner animation="border" variant="primary" />}</p>
+                    </div>
                     <button type='submit'>Log In</button>
                     <p className='text-center'>New User ? <Link to='/signup'><span className='blue-text'>Register Now</span></Link> </p>
                 </form>
