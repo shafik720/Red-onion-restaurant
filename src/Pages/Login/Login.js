@@ -24,6 +24,10 @@ const Login = () => {
 
     // react fire base hook for sign in with google 
     const [signInWithGoogle, userGoogle, errorGoogle] = useSignInWithGoogle(auth);
+    if (userGoogle) {
+        // navigate('/');
+        navigate(from, { replace: true });
+    }
 
 
     // function for getting value from email input field
@@ -42,10 +46,6 @@ const Login = () => {
         signInWithEmailAndPassword(email, password)
     }
     if (user) {
-        // navigate('/');
-        navigate(from, { replace: true });
-    }
-    if (userGoogle) {
         // navigate('/');
         navigate(from, { replace: true });
     }

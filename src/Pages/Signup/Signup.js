@@ -3,7 +3,7 @@ import './Signup.css';
 import signInLogo from '../../utilities/images/logo2.png';
 import { Link, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
-import { useCreateUserWithEmailAndPassword } from 'react-firebase-hooks/auth'
+import { useCreateUserWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth'
 import { Spinner } from 'react-bootstrap';
 import googleLogo from '../../utilities/images/icons/google.svg';
 import githubLogo from '../../utilities/images/icons/github.svg';
@@ -11,13 +11,17 @@ import twitterLogo from '../../utilities/images/icons/twitter.svg';
 
 const Signup = () => {
 
-    // react fire base hook 
+    // react fire base hook for sign in using email & password
     const [
         createUserWithEmailAndPassword,
         user,
         loading,
         error,
     ] = useCreateUserWithEmailAndPassword(auth);
+
+    // react fire base hook for sign in with google 
+    const [signInWithGoogle, userGoogle, errorGoogle] = useSignInWithGoogle(auth);
+    
 
     // function for getting value from email input field
     const [email, setEmail] = useState('');
@@ -55,6 +59,9 @@ const Signup = () => {
     if(user){
         navigate('/');
     }
+    if (userGoogle) {
+        navigate('/');
+    }
     if(error){
         
     }
@@ -85,7 +92,7 @@ const Signup = () => {
                     </div>
                     <p className='text-center'></p>
                     <div className="social-signIn">
-                    <div draggable className="google-signIn">
+                    <div draggable onClick={()=>signInWithGoogle()} className="google-signIn">
                         <img src={googleLogo} alt="" />
                     </div>
                     <div className="google-signIn">
